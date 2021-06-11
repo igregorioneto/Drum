@@ -1,0 +1,41 @@
+@import 'mixins'
+@import 'variables'
+@import 'functions'
+html
+    font-size: 10px
+    @include background-image($path)
+    background-size: cover
+
+body, html
+    @include margin_padding()
+    font-family: sans-serif
+
+.keys 
+    display: flex
+    flex: 1
+    min-height: 100vh
+    align-items: center
+    justify-content: center
+
+.key
+    @include bordas($border, $radios)
+    @include margin_padding($m, $p)
+    @include background($estilos)
+    font-size: 1.5rem
+    transition: all .07s ease
+    width: 10rem
+    text-align: center
+    color: white
+    text-shadow: 0 0 .5rem black
+
+.playing
+    @include bordas(none, none, #ffc600)
+    transform: scale(1.1)
+    box-shadow: 0 0 1rem #ffc600
+
+kdb 
+    @include kbd-mixin(block, 4rem)
+
+.sound
+    @include sound()
+

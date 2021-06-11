@@ -1,0 +1,25 @@
+@mixin background-image($path)
+     background-image: url($path)
+
+@mixin margin_padding($m:0, $p:0)
+    margin: $m
+    padding: $p
+
+@mixin bordas($border:none, $radios:none, $color: none)
+    border: $border
+    border-radius: $radios
+    border-color: $color
+
+@mixin background($estilos)
+    background: $estilos
+
+@mixin kbd-mixin($display, $size)
+    display: $display
+    font-size: $size
+
+@mixin sound()
+    font-size: 1.2rem
+    text-transform: uppercase
+    letter-spacing: .1rem
+    color: #ffc600
+    
